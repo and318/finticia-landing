@@ -1,17 +1,18 @@
+
 # Finticia Landing
 
-**Finticia** es una landing page de una compañía ficticia. El proposito es solo demostrativo como prueba técnica.
+**Finticia** es una landing page de una compañía ficticia. El propósito es solo demostrativo como prueba técnica.
 
 ---
 
 ## ✨ Características
 
-- ⚡ Framework: React
-- 🎨 Estilos con Sass (No framework)
-- 🎞️ Animaciones usando Framer Motion
+- ⚡ Framework: React  
+- 🎨 Estilos con Sass (No framework)  
+- 🎞️ Animaciones usando Framer Motion  
 - 📱 Diseño Responsive para Desktop y Mobile
 
-----
+---
 
 ## ✨ Especificaciones de las Secciones
 
@@ -35,7 +36,6 @@
 - Animación al hacer scroll para que los ítems aparezcan al entrar en la vista.
 - Descripción del producto en un overlay estilo modal al hacer clic.
 
-
 ### Sección Footer:
 - Logo y derechos de autor.
 - Enlaces rápidos.
@@ -48,11 +48,23 @@
 - Logo de Finticia.
 
 ### General:
-- Variables Sass para la paleta de colores. Se utilizó las variables del archivo figma enviado.
+- Variables Sass para la paleta de colores. Se utilizó las variables del archivo Figma enviado.
 - Tipografías 'Open Sans' y 'Graphie' integradas.
 - Comportamiento de scroll suave al hacer clic en los enlaces del menú.
 - Botón "subir" con animación de Framer Motion.
 - `box-sizing: border-box` aplicado globalmente.
+
+---
+
+## 🎯 Justificaciones de diseño
+
+- **Enfoque en el usuario**: El mensaje central apunta al control financiero personal, acompañado de una visualización clara del producto (app en uso).
+- **Estética tecnológica y moderna**: Paleta de colores en negro, blanco y verde neón para transmitir sofisticación, innovación y seguridad.
+- **Jerarquía visual clara**: Tipografías contrastadas, secciones definidas y llamados a la acción bien visibles, facilitando la navegación.
+- **Producto tangible**: Mostrar tarjetas físicas refuerza credibilidad y conexión con el usuario.
+- **Beneficios como experiencia de marca**: Seccio con imágenes atractivas que refuerzan recompensas concretas.
+- **Confianza y seguridad**: Íconos e información simplificada que refuerzan pilares de marca como transparencia y soporte 24/7.
+- **CTA bien definidos**: Botones destacados y accesibles para invitar a la acción de forma constante.
 
 ---
 
@@ -108,7 +120,8 @@ Abre tu navegador en `http://localhost:3000` y explora la aplicación.
   - `index.js`
   - `index.scss`
 
-  ---
+---
 
 ## 💡 Conclusión
-Quise crear la landing con los elementos más nativos de react, sin frameworks ni librería de diseño. La idea es mostrar la capacidad de desarrollo y diseño.   Gracias por su tiempo 🤓.
+
+Quise crear la landing con los elementos más nativos de React, sin frameworks ni librerías de diseño. La idea es mostrar la capacidad de desarrollo y diseño. Gracias por su tiempo 🤓.
