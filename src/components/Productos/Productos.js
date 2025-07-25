@@ -32,6 +32,7 @@ function Productos() {
   const [selectedCard, setSelectedCard] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [showTooltip, setShowTooltip] = useState({ id: null, x: 0, y: 0 });
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });
@@ -68,6 +69,14 @@ function Productos() {
     setSelectedCard(null);
   };
 
+  const handleMouseEnter = (e, id) => {
+    setShowTooltip({ id, x: e.clientX, y: e.clientY });
+  };
+
+  const handleMouseLeave = () => {
+    setShowTooltip({ id: null, x: 0, y: 0 });
+  };
+
   const currentProduct = selectedCard ? cardData.find(card => card.id === selectedCard) : null;
 
   return (
@@ -99,7 +108,8 @@ function Productos() {
               </motion.div>
             </AnimatePresence>
           ) : (
-            cardData.map((card, index) => (
+            <AnimatePresence>
+            {cardData.map((card, index) => (
               <motion.div
                 key={card.id}
                 className="card-item"
@@ -108,6 +118,8 @@ function Productos() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ scale: 1.03, zIndex: 10 }}
                 onClick={() => handleCardClick(card.id)}
+                onMouseEnter={(e) => handleMouseEnter(e, card.id)}
+                onMouseLeave={handleMouseLeave}
               >
                 <img 
                   src={card.image} 
@@ -116,8 +128,20 @@ function Productos() {
                   style={{ animationDelay: `${index * 0.2}s` }} // Retraso intercalado
                 />
                 <h3>{card.title}</h3>
+                {showTooltip.id === card.id && (
+                  <motion.div
+                    className="tooltip"
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    ¡Clickeame!
+                  </motion.div>
+                )}
               </motion.div>
-            ))
+            ))}
+            </AnimatePresence>
           )}
         </div>
         {isMobile && (

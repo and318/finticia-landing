@@ -111,4 +111,4 @@ Abre tu navegador en `http://localhost:3000` y explora la aplicación.
   ---
 
 ## 💡 Conclusión
-Quise crear la landing con los elementos más nativos de react, sin frameworks ni librería de diseño. La idea es mostrar la capacidad de desarrollo y diseño.Gracias por su tiempo 🤓.
+Quise crear la landing con los elementos más nativos de react, sin frameworks ni librería de diseño. La idea es mostrar la capacidad de desarrollo y diseño.   Gracias por su tiempo 🤓.

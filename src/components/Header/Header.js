@@ -44,6 +44,7 @@ function Header() {
             <li><a href="#hero">Inicio</a></li>
             <li><a href="#productos">Productos</a></li>
             <li><a href="#benefits">Beneficios</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
             <li><a href="#footer">Contacto</a></li>
           </ul>
         </nav>
@@ -62,7 +63,7 @@ function Header() {
                 <li><a href="#hero" onClick={toggleMenu}>Inicio</a></li>
                 <li><a href="#productos" onClick={toggleMenu}>Productos</a></li>
                 <li><a href="#benefits" onClick={toggleMenu}>Beneficios</a></li>
-                <li><a href="#details" onClick={toggleMenu}>Detalles</a></li>
+                <li><a href="#nosotros" onClick={toggleMenu}>Nosotros</a></li>
                 <li><a href="#footer" onClick={toggleMenu}>Contacto</a></li>
               </ul>
             </motion.nav>

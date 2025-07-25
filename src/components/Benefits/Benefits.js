@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import './Benefits.scss';
 
 // Importar imágenes de masonry
@@ -68,17 +68,19 @@ const benefitsData = [
 ];
 
 function Benefits() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
+
   return (
     <section id="benefits" className="benefits">
       <h2>Beneficios de Finticia</h2>
-      <div className="benefits-grid">
+      <div className="benefits-grid" ref={ref}>
         {benefitsData.map((benefit) => (
           <motion.div
             key={benefit.id}
             className={`benefit-item ${benefit.sizeClass || ''}`}
             initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: benefit.id * 0.1 }}
             whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.1)" }}
           >

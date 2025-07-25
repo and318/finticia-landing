@@ -1,5 +1,16 @@
 @import './styles/variables';
 
+body {
+  background-image: url('./assets/img/pattern-bkg.svg');
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: center top;
+}
+
+h2 {
+  font-family: 'Graphie', sans-serif;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

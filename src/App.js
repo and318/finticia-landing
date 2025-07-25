@@ -6,6 +6,7 @@ import Hero from './components/Hero/Hero';
 import Benefits from './components/Benefits/Benefits';
 import Productos from './components/Productos/Productos';
 import Footer from './components/Footer/Footer';
+import Nosotros from './components/Nosotros/Nosotros'; 
 
 function App() {
   const [showScrollToTop, setShowScrollToTop] = useState(false);
@@ -37,6 +38,7 @@ function App() {
       <Hero />
       <Productos />
       <Benefits />
+      <Nosotros/>
       <Footer />
 
       <AnimatePresence>
