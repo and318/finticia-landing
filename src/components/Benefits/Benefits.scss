@@ -1,0 +1,152 @@
+@import '../../styles/variables';
+
+.benefits {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: $neutral-50;
+  color: $text-900;
+  background-color: $neutral-800;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: $text-0;
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .benefit-item {
+      border-radius: 10px;
+      border: 4px solid $primary-400;
+      transition: all 0.6s; 
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transform-style: preserve-3d;
+      
+      &.wide {
+        grid-column: span 2;
+      }
+      &.tall {
+        grid-row: span 2;
+      }
+      &.big {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+
+      &:hover .card-inner {
+        transform: rotateY(180deg);
+      }
+
+      .card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        
+      }
+
+      .card-front, .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+      }
+
+      .card-front {
+        background-color: $neutral-0;
+        color: $text-900;
+      }
+
+      .card-back {
+        background-color: $neutral-900;
+        color: $text-0;
+        transform: rotateY(180deg);
+        text-align: center;
+        justify-content: center;
+
+        h3 {
+          color: $primary-700;
+          margin-bottom: 0.5rem;
+          font-size: 1.2rem;
+        }
+
+        p {
+          color: $text-0;
+          font-size: 0.8rem;
+        }
+      }
+
+      .benefit-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        vertical-align: middle;
+      }
+
+      .content-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1.5rem;
+        color: $text-0;
+        text-align: left;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+      }
+
+      &.flipped .card-front .content-overlay {
+        opacity: 0;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: $text-0;
+      }
+
+      p {
+        font-size: 1rem;
+        color: $text-100;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .benefits-grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-auto-rows: 150px;
+    }
+  }
+}

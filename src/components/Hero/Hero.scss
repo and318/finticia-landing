@@ -1,0 +1,94 @@
+@import '../../styles/variables';
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  margin-top: 6rem;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.hero-text-column {
+  flex: 1;
+  text-align: right;
+  padding-right: 2rem;
+
+  @media (max-width: 768px) {
+    padding-right: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    z-index: 1;
+    line-height: 1em;
+    color: $text-900;
+    font-weight: bold;
+    font-family: 'Graphie', sans-serif;
+    
+  }
+  .title {
+
+    font-size: 1.8rem;
+      font-family: 'open-sans', sans-serif;
+    }
+}
+
+.hero-image-column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .hero-phone-mockup {
+    position: relative;
+    width: 400px;
+    
+    height: auto;
+    z-index: 0;
+
+    @media (max-width: 768px) {
+      max-height: 40vh;
+      object-fit: cover; // Cambiado a cover
+      object-position: top; // Alinea la imagen a la parte superior
+      align-self: flex-end;
+      width: 500px;
+    }
+  }
+}
+
+.cta-button {
+  background-color: $primary-500;
+  color: $text-0;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 1;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $primary-600;
+  }
+}
