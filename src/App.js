@@ -5,7 +5,6 @@ import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import Benefits from './components/Benefits/Benefits';
 import Productos from './components/Productos/Productos';
-import Details from './components/Details/Details';
 import Footer from './components/Footer/Footer';
 
 function App() {
@@ -38,8 +37,6 @@ function App() {
       <Hero />
       <Productos />
       <Benefits />
-      
-     
       <Footer />
 
       <AnimatePresence>

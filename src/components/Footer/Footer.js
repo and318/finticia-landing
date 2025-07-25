@@ -35,8 +35,8 @@ function Footer() {
 
         <div className="footer-downloads">
           <h3>Descarga la App</h3>
-          <a href="#" target="_blank" rel="noopener noreferrer"><img src={playStore} alt="Descargar en Play Store" /></a>
-          <a href="#" target="_blank" rel="noopener noreferrer"><img src={appStore} alt="Descargar en App Store" /></a>
+          <a href="javascript:void(0)" target="_blank" rel="noopener noreferrer"><img src={playStore} alt="Descargar en Play Store" /></a>
+          <a href="javascript:void(0)" target="_blank" rel="noopener noreferrer"><img src={appStore} alt="Descargar en App Store" /></a>
         </div>
       </div>
     </footer>
