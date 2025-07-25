@@ -41,7 +41,7 @@ function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.4 }}
-            whileHover={{ scale: 1.1, backgroundColor: "#00331E" }}
+            whileHover={{ scale: 1.1, backgroundColor: "#00D17A" }}
             whileTap={{ scale: 0.9 }}
             onClick={() => document.getElementById('productos').scrollIntoView({ behavior: 'smooth' })}
           >
