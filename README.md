@@ -16,6 +16,11 @@
 
 ## ✨ Especificaciones de las Secciones
 
+### Header:
+- Fijo en la parte superior.
+- Menú de navegación responsivo con icono de hamburguesa (SVG) y animación de apertura/cierre suave.
+- Logo de Finticia.
+
 ### Sección Hero:
 - Animación de entrada para texto y elementos gráficos.
 - Interacciones de scroll con efecto parallax para el texto y la imagen del teléfono.
@@ -36,16 +41,17 @@
 - Animación al hacer scroll para que los ítems aparezcan al entrar en la vista.
 - Descripción del producto en un overlay estilo modal al hacer clic.
 
+### Sección Nosotros:
+- Presenta información clave sobre la compañía a través de 4 tarjetas.
+- Cada tarjeta incluye un icono SVG animado (flotante), un título y una descripción.
+- Las tarjetas tienen una animación de entrada asíncrona al aparecer en la vista.
+- Incluye un Call to Action (CTA) animado debajo de las tarjetas para invitar a la acción.
+
 ### Sección Footer:
 - Logo y derechos de autor.
 - Enlaces rápidos.
 - Enlaces a descargas de Play Store y App Store (no funcionales).
 - Información de contacto.
-
-### Header:
-- Fijo en la parte superior.
-- Menú de navegación responsivo con icono de hamburguesa (SVG) y animación de apertura/cierre suave.
-- Logo de Finticia.
 
 ### General:
 - Variables Sass para la paleta de colores. Se utilizó las variables del archivo Figma enviado.
