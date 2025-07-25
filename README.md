@@ -36,8 +36,6 @@
 - Animación al hacer scroll para que los ítems aparezcan al entrar en la vista.
 - Descripción del producto en un overlay estilo modal al hacer clic.
 
-### Sección Detalles:
-- Información de contacto (chat, teléfono, email).
 
 ### Sección Footer:
 - Logo y derechos de autor.
@@ -80,7 +78,7 @@
 Para correr el proyecto en tu entorno local, sigue estos pasos:
 
 ```bash
-git clone [URL_DEL_REPOSITORIO_FINTICIA] # Reemplaza con la URL de tu repositorio
+git clone https://github.com/and318/finticia-landing # Reemplaza con la URL de tu repositorio
 cd finticia-landing
 npm install
 npm start
